@@ -1,0 +1,374 @@
+[
+  {
+    "ContainingType": "Jornadas_Metalurgia_2026.Controllers.InscriptionController",
+    "Method": "CreateInscription",
+    "RelativePath": "api/JornadaMetal\u00FArgica/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "inscription",
+        "Type": "Jornadas_Metalurgia_2026.Models.Inscription.DTO.InscriptionCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Jornadas_Metalurgia_2026.Models.Inscription.Inscription",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      },
+      {
+        "Type": "Jornadas_Metalurgia_2026.Utils.HttpMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Jornadas_Metalurgia_2026.Utils.HttpMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "Jornadas_Metalurgia_2026.Controllers.InscriptionController",
+    "Method": "GetAllInscriptions",
+    "RelativePath": "api/JornadaMetal\u00FArgica/inscriptions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isActive",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Jornadas_Metalurgia_2026.Models.Inscription.Inscription, Jornadas-Metalurgia-2026, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Jornadas_Metalurgia_2026.Controllers.InscriptionController",
+    "Method": "DeleteInscription",
+    "RelativePath": "api/JornadaMetal\u00FArgica/inscriptions/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Jornadas_Metalurgia_2026.Utils.HttpMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Jornadas_Metalurgia_2026.Utils.HttpMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "Jornadas_Metalurgia_2026.Utils.HttpMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "Jornadas_Metalurgia_2026.Controllers.InscriptionController",
+    "Method": "UpdateInscription",
+    "RelativePath": "api/JornadaMetal\u00FArgica/inscriptions/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Jornadas_Metalurgia_2026.Models.Inscription.DTO.InscriptionUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Jornadas_Metalurgia_2026.Models.Inscription.DTO.InscriptionUpdateDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Jornadas_Metalurgia_2026.Utils.HttpMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Jornadas_Metalurgia_2026.Utils.HttpMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "Jornadas_Metalurgia_2026.Utils.HttpMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      }
+    ]
+  },
+  {
+    "ContainingType": "Jornadas_Metalurgia_2026.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/JornadaMetal\u00FArgica/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "Jornadas_Metalurgia_2026.Models.User.DTO.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Jornadas_Metalurgia_2026.Models.User.DTO.LoginResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Jornadas_Metalurgia_2026.Utils.HttpMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Jornadas_Metalurgia_2026.Utils.HttpMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "Jornadas_Metalurgia_2026.Controllers.AuthController",
+    "Method": "LogOut",
+    "RelativePath": "api/JornadaMetal\u00FArgica/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Jornadas_Metalurgia_2026.Models.User.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 401
+      },
+      {
+        "Type": "Jornadas_Metalurgia_2026.Utils.HttpMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "Jornadas_Metalurgia_2026.Controllers.AuthController",
+    "Method": "GetSelf",
+    "RelativePath": "api/JornadaMetal\u00FArgica/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Jornadas_Metalurgia_2026.Models.User.DTO.UserWithoutPasswordDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 401
+      },
+      {
+        "Type": "Jornadas_Metalurgia_2026.Utils.HttpMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "Jornadas_Metalurgia_2026.Controllers.AuthController",
+    "Method": "GetUsers",
+    "RelativePath": "api/JornadaMetal\u00FArgica/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Jornadas_Metalurgia_2026.Models.User.DTO.UserWithoutPasswordDTO, Jornadas-Metalurgia-2026, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Jornadas_Metalurgia_2026.Controllers.AuthController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/JornadaMetal\u00FArgica/users/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Jornadas_Metalurgia_2026.Models.User.DTO.UpdateUserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Jornadas_Metalurgia_2026.Models.User.DTO.UserWithoutPasswordDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Jornadas_Metalurgia_2026.Utils.HttpMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Jornadas_Metalurgia_2026.Utils.HttpMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "Jornadas_Metalurgia_2026.Utils.HttpMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  }
+]
